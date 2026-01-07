@@ -1,4 +1,9 @@
 body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+  min-height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
 }
