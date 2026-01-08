@@ -118,12 +118,12 @@ main {
   border-bottom: 1px solid rgba(97, 115, 60, 0.3);
 }
 .about-content_1 p {
-  flex: 2;
+  flex: 1;
 }
 
 .about-content_1 img {
-  flex: 1;
-  max-width: 200px;
+  flex: 2;
+  max-width: 150px;
   height: auto;
   border-radius: 10px;
 }
@@ -145,9 +145,14 @@ main {
   border: 2px solid var(--accent);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-self: space-between;
   gap: 10px;
   background-color: var(--accent2);
+}
+
+#resources h2 {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 #resources ul {
