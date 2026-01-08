@@ -4,29 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals</title>
-    <link rel="stylesheet" href="styles/layout.css">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals | Tirso A Lopez | Basic development of HTML, CSS, JS and responsive design.">
+    <meta name="author" content="Tirso A Lopez">
+    <title>WDD 131 - Dynamic Web Fundamentals - Tirso A Lopez</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+
 </head>
 
 <body>
     <header>
-        <h1>WDD 131: Dynamic Web Fundamentals</h1>
+        <span>
+            <h1 id="title">WDD 131: Dynamic Web Fundamentals</h1>
+        </span>
         <nav>
             <ul>
-                <li><a href="#">Linkedin</a></li>
-                <li><a href="#">I-Learn</a></li>
-                <li><a href="#">Scripture</a></li>
+                <li><a href="https://www.linkedin.com/in/tirsolopez/">Linkedin</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a
+                        href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng&id=p3">Scripture</a>
+                </li>
                 <li><a href="#">Final Project</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="title">
-            <h2>Tirso A Lopez</h2>
-        </section>
-        <section id="about-me">
+        <h1>Tirso A Lopez</h1>
+        <section class="card">
             <h2>About me</h2>
-            <div class="about-content_1">
+            <div class="about">
                 <p>My name is Tirso Lopez, a proud Colombian-Canadian specializing in the intersection of real estate
                     and technology. I focus on automation, data, and digital marketing, building smart systems that
                     seamlessly connect CRMs, reporting, and advertising tools to drive real results. With a background
@@ -34,16 +41,17 @@
                     turning complex challenges into streamlined, effective solutions.</p>
                 <img src="images/profile.jpg" alt="Profile Picture">
             </div>
-            <div class="about-content_2">
+            <div class="country">
                 <img src="images/canada.jpg" alt="Oh Canada">
-                <p>Canada is a country shaped by its people. It is known for its openness, cultural diversity, and deep
-                    respect for different backgrounds and perspectives. Canadian culture values kindness, balance, and
+                <p>Canada is a country shaped by its people. It is known for its openness, cultural diversity, and
+                    deep
+                    respect for different backgrounds and perspectives. Canadian culture values kindness, balance,
+                    and
                     community, blending traditions from around the world with a strong sense of inclusion and mutual
-                    respect. This multicultural spirit, combined with a love for nature and a calm, welcoming way of
-                    life, makes Canada a place where people truly feel at home.</p>
+                    respect. </p>
             </div>
         </section>
-        <section id="resources">
+        <section class="card">
             <h2>Web Dev Resources</h2>
             <ul>
                 <li><a href="#">Dev.to Community</a></li>
@@ -55,8 +63,8 @@
         </section>
     </main>
     <footer>
-        <p>© 2026 Ty Lopez. All rights reserved. St Constant, Quebec Canada<br>
-        </p>
+        <p>©<span id="currentyear"></span> Ty Lopez. All rights reserved. Quebec Canada</p>
+        <p><span id="lastModified"></span></p>
     </footer>
 </body>
 
