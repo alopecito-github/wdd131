@@ -1,10 +1,41 @@
 /* --------------------------------
-   Larger-screen 
-   
+   Larger-screen styles
 ---------------------------------*/
 
-/* Small tablets and up: 2 columns */
-@media (min-width: 600px) {
+@media (min-width: 646px) {
+  header {
+    padding: 1rem 1rem;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    position: static;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    font-size: 0.5rem;
+  }
+
+  .navigation li {
+    flex: 0;
+    width: 100%;
+    display: inline-block;
+    padding: 0 1rem;
+  }
+
+  .navigation a {
+    text-align: center;
+    background: transparent;
+    color: var(--secondary);
+  }
+
+  #menu {
+    display: none;
+  }
+  /* Images grid */
   .images-section {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
@@ -14,23 +45,33 @@
   main h1 {
     font-size: 1.75rem;
   }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1;
+    padding-top: var(--nav-h);
+  }
 }
 
-/* 900px+: 3 columns and centered nav */
 @media (min-width: 900px) {
   main h1 {
     font-size: 1.75rem;
     margin-bottom: 1.25rem;
   }
 
-  nav ul {
-    justify-content: center;
-    padding-bottom: 0.75rem;
+  .navigation {
+    justify-content: flex-end;
+  }
+  .navigation a {
+    padding: 1rem;
   }
 
   .images-section {
-    grid-template-columns: repeat(3, 1fr); /* 3-up grid on large screens */
-    gap: 1.25rem 1.25rem; /* row/column gaps similar to screenshot */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem 1.25rem;
     padding-inline: 1.25rem;
   }
 
@@ -39,11 +80,10 @@
   }
 }
 
-/* 1200px+: 4 columns and relaxed spacing */
 @media (min-width: 1200px) {
   .images-section {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     padding-inline: 2rem;
   }
 
