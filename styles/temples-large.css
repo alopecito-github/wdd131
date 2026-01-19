@@ -1,0 +1,53 @@
+/* --------------------------------
+   Larger-screen 
+   
+---------------------------------*/
+
+/* Small tablets and up: 2 columns */
+@media (min-width: 600px) {
+  .images-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding-inline: 1.25rem;
+  }
+
+  main h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* 900px+: 3 columns and centered nav */
+@media (min-width: 900px) {
+  main h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  nav ul {
+    justify-content: center;
+    padding-bottom: 0.75rem;
+  }
+
+  .images-section {
+    grid-template-columns: repeat(3, 1fr); /* 3-up grid on large screens */
+    gap: 1.25rem 1.25rem; /* row/column gaps similar to screenshot */
+    padding-inline: 1.25rem;
+  }
+
+  #page-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* 1200px+: 4 columns and relaxed spacing */
+@media (min-width: 1200px) {
+  .images-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem 1.5rem;
+    padding-inline: 2rem;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+}
