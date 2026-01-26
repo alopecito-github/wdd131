@@ -24,8 +24,9 @@
   header,
   footer {
     flex-shrink: 0;
-    padding: 1rem;
+    padding: 0.5rem;
     z-index: 10;
+    line-height: 1;
   }
 
   .weather-icon-mobile {
