@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD131 Week 3 Place Country Page">
+    <meta name="author" content="Tirso Anibal Lopez">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <title>WDD 131 - Favorite Country activity</title>
+</head>
+
+
+<body>
+    <!-- =========================  HEADER   ========================= -->
+    <header>
+        <div class="wrapper">
+            <h1 class="site-title">Colombia</h1>
+        </div>
+    </header>
+
+    <!-- ========================= HERO SECTION  ========================= -->
+    <main class="wrapper main-content">
+        <picture class="hero-image-container">
+            <source srcset="images_place/colombia-large.webp" media="(min-width: 1200px)">
+            <source srcset="images_place/colombia-medium.webp" media="(min-width: 680px)">
+            <img class="hero-image" src="images_place/colombia-small.webp"
+                alt="Colombia the most beautiful country in the world" width="100%" height="auto">
+        </picture>
+        <!-- ===== DATA SECTION ===== -->
+        <section class="blurb_data" id="data">
+            <h2 class="card-heading">Data</h2>
+            <table class="data-table">
+                <tr>
+                    <th>Area:</th>
+                    <td>1,141,748 sq km</td>
+                </tr>
+                <tr>
+                    <th>Population:</th>
+                    <td>~52,000,000</td>
+                </tr>
+                <tr>
+                    <th>Capital:</th>
+                    <td>Bogotá</td>
+                </tr>
+                <tr>
+                    <th>Languages:</th>
+                    <td>Spanish</td>
+                </tr>
+                <tr>
+                    <th>Currency:</th>
+                    <td>Colombian Peso (COP)</td>
+                </tr>
+                <tr>
+                    <th>Time Zone:</th>
+                    <td>UTC-5</td>
+                </tr>
+                <tr>
+                    <th>Calling Code:</th>
+                    <td>+57</td>
+                </tr>
+                <tr>
+                    <th>Internet TLD:</th>
+                    <td>.co</td>
+                </tr>
+            </table>
+        </section>
+        <!-- ===== WEATHER SECTION ===== -->
+        <section class="blurb-weather" id="weather">
+            <h2 class="card-heading">Weather</h2>
+            <!-- Mobile SVG icon (desktop icon added via CSS ::after)
+            <div class="weather-icon-mobile">
+                <img src="images_place/cloud-sun-rain-solid-full.svg" alt="Weather icon" width="25%">
+            </div> -->
+            <div class="weather-icon-mobile"></div>
+            <table class="data-table">
+                <tbody>
+                    <tr>
+                        <th>Temperature:</th>
+                        <td><span id="temp">10</span> °C</td>
+                    </tr>
+
+                    <tr>
+                        <th>Conditions:</th>
+                        <td>Partly Cloudy</td>
+                    </tr>
+
+                    <tr>
+                        <th>Wind:</th>
+                        <td><span id="wind">5</span> km/h</td>
+                    </tr>
+
+                    <tr>
+                        <th>Wind Chill:</th>
+                        <td><span id="windchill">N/A</span> °C</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer   ========================= -->
+    <footer>
+        <div class="wrapper">
+            <p>&copy; <span id="currentyear"></span> Tirso Anibal Lopez. All rights reserved. Quebec Canada</p>
+            <p><span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
