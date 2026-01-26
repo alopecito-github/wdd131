@@ -84,9 +84,9 @@
   }
 
   .card-heading {
-    background-color: red;
+    background-color: var(--primary);
     padding: 0.6rem 1rem;
-    color: var(--color-light);
+    color: #000;
     margin-left: -1.5rem;
     border-radius: 4px;
   }

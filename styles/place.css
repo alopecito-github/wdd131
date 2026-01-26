@@ -63,7 +63,7 @@ footer {
   background-color: var(--secondary_2);
   border-top: var(--secondary) 12px solid;
   text-align: center;
-  color: var(--color-light);
+  color: #000;
 }
 .site-title {
   font-size: 2rem;
