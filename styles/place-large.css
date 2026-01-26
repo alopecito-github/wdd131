@@ -21,12 +21,19 @@
     overflow: hidden;
     margin: 0;
   }
+  header {
+    padding: 1.5rem;
+  }
+
   header,
   footer {
     flex-shrink: 0;
-    padding: 0.5rem;
     z-index: 10;
     line-height: 1;
+  }
+
+  footer {
+    padding: 0.5rem;
   }
 
   .weather-icon-mobile {
