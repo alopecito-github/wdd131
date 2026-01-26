@@ -60,7 +60,7 @@ header {
   border-bottom: var(--secondary) 12px solid;
 }
 footer {
-  background-color: var(--secondary_2);
+  background-color: var(--primary);
   border-top: var(--secondary) 12px solid;
   text-align: center;
   color: #000;
