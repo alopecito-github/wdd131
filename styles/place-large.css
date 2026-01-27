@@ -30,7 +30,7 @@
   .blurb-weather .card-heading::after {
     content: " ⛅";
     font-size: 1.6rem;
-    color: var(--red);
+    color: var(--secondary_2);
   }
   .site-title {
     padding: 0.5rem;
@@ -72,20 +72,19 @@
     margin-left: -1.5rem;
     border-radius: 4px;
   }
-
-  @media (min-width: 800px) {
-    .blurb_data {
-      width: 40%;
-    }
-
-    .blurb-weather {
-      bottom: 100px;
-      right: 20px;
-      width: 40%;
-    }
-  }
 }
 
+@media (min-width: 800px) {
+  .blurb_data {
+    width: 40%;
+  }
+
+  .blurb-weather {
+    bottom: 100px;
+    right: 20px;
+    width: 40%;
+  }
+}
 @media (min-width: 1200px) {
   .blurb_data {
     width: 20%;
