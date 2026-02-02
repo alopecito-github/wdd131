@@ -1,0 +1,158 @@
+/* --------------------------------
+   Larger-screen styles
+---------------------------------*/
+
+@media (min-width: 646px) {
+  header {
+    padding: 1rem 1rem;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    position: static;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    font-size: 0.5rem;
+  }
+  .nav li {
+    flex: 0;
+    width: 100%;
+    display: inline-block;
+    padding: 0 1rem;
+  }
+  .nav a {
+    text-align: center;
+    background: transparent;
+    color: var(--secondary);
+  }
+
+  #menu {
+    display: none;
+  }
+  /* Images grid */
+  .images-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding-inline: 1.25rem;
+  }
+
+  main h1 {
+    font-size: 1.75rem;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1;
+    padding-top: var(--nav-h);
+  }
+
+  .temple-card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+
+  .temple-card .templeImage {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .title_card {
+    font-size: 1.9rem;
+  }
+
+  .title_card {
+    font-size: 1.4rem; /* slightly larger */
+  }
+
+  .temple-card .label {
+    font-size: 0.85rem;
+  }
+
+  .temple-card p {
+    margin: 0.15rem 0;
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 900px) {
+  main h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .nav {
+    justify-content: flex-end;
+  }
+  .nav a {
+    padding: 1rem;
+  }
+
+  .images-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem 1.25rem;
+    padding-inline: 1.25rem;
+  }
+  #page-title {
+    font-size: 1.35rem;
+  }
+
+  .temple-card {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .temple-card p {
+    margin: 0.25rem 0;
+  }
+
+  .temple-card img {
+    margin-top: 0.75rem;
+  }
+  main {
+    max-width: 1400px;
+  }
+  .title_card {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .temple-card .label {
+    font-size: 0.7rem;
+  }
+  .temple-card p {
+    margin: 0 0;
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .images-section {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    padding-inline: 2rem;
+  }
+  main {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+  .title_card {
+    font-size: 1.4rem;
+  }
+  .temple-card .label,
+  .temple-card p {
+    font-size: 1rem;
+  }
+}
