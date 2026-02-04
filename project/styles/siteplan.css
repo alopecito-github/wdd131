@@ -1,0 +1,176 @@
+:root {
+  --primary-navy: #0b1c2c;
+  --accent-gold: #c59d5f;
+  --cta-red: #da291c;
+  --bg-light: #f8f5f2;
+  --bg-white: #ffffff;
+  --text-dark: #333333;
+  --font-header: "Instrument Serif", serif;
+  --font-text: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base layout + typography */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-family: var(--font-text);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: var(--font-header);
+  color: var(--primary-navy);
+  margin-top: 0;
+}
+
+p {
+  font-family: var(--font-text);
+}
+
+header {
+  background-color: var(--bg-white);
+  padding: 1.5rem 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: var(--cta-red);
+  text-align: center;
+}
+
+/* Sections */
+section {
+  margin-top: 2rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.3rem;
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  border-left: 2px solid var(--accent-gold);
+}
+
+section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+}
+
+/* Color Scheme Section + Table */
+#color-scheme {
+  font-size: 0.85rem;
+}
+
+.color-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: var(--font-text);
+}
+
+.color-table th,
+.color-table td {
+  border: 1px solid var(--accent-gold);
+  padding: 0.75rem;
+  vertical-align: middle;
+  font-size: 0.85rem;
+}
+
+.color-table th {
+  background-color: var(--bg-light);
+  color: var(--primary-navy);
+  text-align: left;
+  font-weight: 600;
+}
+
+.color-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+/* Swatch colors */
+.navy {
+  background-color: var(--primary-navy);
+}
+.gold {
+  background-color: var(--accent-gold);
+}
+.red {
+  background-color: var(--cta-red);
+}
+.light {
+  background-color: var(--bg-light);
+}
+.text-color {
+  background-color: var(--text-dark);
+}
+
+/* Typography Section */
+#typography {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-light);
+  font-size: 0.98rem;
+}
+
+#typography ul {
+  padding: 1rem 1.25rem;
+}
+
+#typography .type-example {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-white);
+}
+
+#typography .type-example h3 {
+  color: var(--cta-red);
+}
+
+.desktop,
+.mobile {
+  max-width: 100%;
+  border: 2px solid var(--cta-red);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--primary-navy);
+  padding: 1.5rem 1rem 2rem;
+}

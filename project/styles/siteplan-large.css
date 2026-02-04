@@ -1,0 +1,78 @@
+/* --------------------------------
+   Larger-screen styles (desktop)
+   Mobile-first: base styles are in siteplan.css
+---------------------------------*/
+
+/* Medium screens: tablets / small laptops */
+@media (min-width: 646px) {
+  main {
+    padding: 3rem 2rem 4rem;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  section {
+    margin-top: 2.5rem;
+    padding: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  section p,
+  ul {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    max-width: 1100px;
+  }
+
+  section {
+    margin-top: 2.75rem;
+    padding: 2.25rem 2.5rem;
+  }
+
+  #purpose h2,
+  #scenarios h2,
+  #color-scheme h2,
+  #typography h2 {
+    font-size: 1.5rem;
+  }
+
+  section p {
+    font-size: 1.1rem;
+  }
+
+  ul {
+    font-size: 1.1rem;
+  }
+
+  #color-scheme {
+    font-size: 1.1rem;
+  }
+
+  .color-table th,
+  .color-table td {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  main {
+    max-width: 1200px;
+  }
+
+  header h1 {
+    font-size: 2.3rem;
+  }
+}
