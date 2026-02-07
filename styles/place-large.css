@@ -1,96 +1,58 @@
-/* --------------------------------
-   Larger-screen styles
----------------------------------*/
-
-@media (min-width: 680px) {
-  body {
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
-  }
-  header {
-    padding: 1.5rem;
-  }
-
-  header,
-  footer {
-    flex-shrink: 0;
-    z-index: 10;
-    line-height: 1;
-  }
-
-  footer {
-    padding: 0.5rem;
-    line-height: 1.5;
-  }
-
-  .weather-icon-mobile {
-    display: none;
-  }
-  .blurb-weather .card-heading::after {
-    content: " ⛅";
-    font-size: 1.6rem;
-    color: var(--secondary_2);
-  }
-  .site-title {
-    padding: 0.5rem;
-  }
+/* =========================
+   Large Screen Layout
+   ========================= */
+@media (min-width: 900px) {
+  /* Wider main wrapper */
   main {
-    position: relative;
-    flex-grow: 1;
-    width: 100%;
-    overflow: hidden;
+    max-width: 800px;
+    padding: 2.5rem 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
-  .hero-image-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  /* Form fields spaced more comfortably */
+  form {
+    gap: 2rem;
   }
 
-  .blurb-weather,
-  .blurb_data {
-    position: absolute;
+  .form-field label {
+    font-size: 1.1rem;
   }
 
-  .blurb_data {
-    top: 20px;
-    left: 20px;
-    width: 50%;
+  input[type="text"],
+  input[type="date"],
+  select,
+  textarea {
+    padding: 0.8rem;
+    font-size: 1.05rem;
   }
 
-  .blurb-weather {
-    bottom: 20px;
-    right: 20px;
-    width: 45%;
+  /* Stars nicely spaced */
+  .stars-container {
+    gap: 2rem;
   }
 
-  .card-heading {
-    background-color: var(--primary);
-    padding: 0.6rem 1rem;
-    color: #000;
-    margin-left: -1.5rem;
-    border-radius: 4px;
-  }
-}
-
-@media (min-width: 800px) {
-  .blurb_data {
-    width: 40%;
+  .star-group label {
+    font-size: 1.6rem;
   }
 
-  .blurb-weather {
-    bottom: 100px;
-    right: 20px;
-    width: 40%;
-  }
-}
-@media (min-width: 1200px) {
-  .blurb_data {
-    width: 20%;
+  /* Review summary box widened & centered */
+  #review-summary {
+    max-width: 800px;
   }
 
-  .blurb-weather {
-    width: 15%;
+  .review-output-box {
+    padding: 2rem 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .review-output-box p {
+    margin-bottom: 1rem;
+  }
+
+  /* Better footer alignment */
+  footer {
+    font-size: 1rem;
+    padding: 2rem;
   }
 }
