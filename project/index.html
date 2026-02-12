@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD131 Dynamic Web Fundamentals Author: Tirso Anibal Lopez. Rental Listing Project.">
+    <meta name="author" content="Tirso Anibal Lopez">
+    <meta name="keywords"
+        content="Montreal Downtown rental, Montreal apartment rental, Montreal condo rental, Montreal house rental, Montreal room rental, Montreal studio rental, Montreal long-term rental, Montreal luxury rental, Montreal affordable rental, Montreal student rental">
+    <title>Montreal Rental Hub</title>
+    <link rel="stylesheet" href="styles/rental.css">
+    <link rel="stylesheet" href="styles/rental-large.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/rental.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/icons/baker_logo.svg" alt="Montreal Rental Hub Logo" class="logo"></a>
+        <a id="menu" href="#"></a>
+        <nav>
+            <ul class="nav">
+                <li><a href="#" id="aboutUs">About Us</a></li>
+                <li><a href="#" id="ourUnits">Our Units</a></li>
+                <li><a href="#" id="contactUs">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-block">
+            <div class="hero-visual-container">
+                <picture class="hero-image-wrapper">
+                    <source srcset="images/AGVLobby_desktop_2250-sq.webp" media="(min-width: 900px)">
+                    <source srcset="images/AGVLobby_tablet_1500-sq.webp" media="(min-width: 680px)">
+                    <img class="hero-image" src="images/AVG Lobby_mobile_960.webp" alt="Montreal Rental Hub"
+                        loading="lazy">
+                </picture>
+
+                <div class="hero-title-overlay">
+                    <h1>MONTREAL<br>RENTAL HUB.</h1>
+                </div>
+            </div>
+
+            <div class="hero-subtitle-bar">
+                <h2>NEW RENTALS AT THE CENTRE OF IT ALL</h2>
+            </div>
+        </section>
+        <section class="content-section">
+            <picture class="content-image-container">
+                <source srcset="images/mscxp-biosphere-3545294_1920.webp" media="(min-width: 1200px)">
+                <source srcset="images/montrea_3_1920x1015_tablet.webp" media="(min-width: 680px)">
+                <img class="content-image" src="images/montrea_3_1080x680_mobile.webp" alt="Montreal Rental Hub"
+                    loading="lazy">
+            </picture>
+
+            <article id="aboutUsSection">
+                <h2>About Us</h2>
+                <p>Welcome to Montreal Rental Hub, your premier destination for finding the perfect rental property in
+                    the heart of Montreal. We specialize in connecting tenants with a diverse range of rental options,
+                    from cozy apartments to spacious condos and charming houses. Our dedicated team is committed to
+                    providing exceptional service and personalized assistance to ensure a seamless rental experience.
+                    Whether you're a student, professional, or family, we have the ideal rental solution to meet your
+                    needs. Explore our listings today and discover your next home with Montreal Rental Hub.</p>
+            </article>
+            <picture class="content-image-container">
+                <source srcset="images/montrea_4_1920x1080.webp" media="(min-width: 1200px)">
+                <source srcset="images/montrea_4_1920x1015_tablet.webp" media="(min-width: 680px)">
+                <img class="content-image" src="images/montrea_4_1080x680_mobile.webp" alt="Montreal Rental Hub"
+                    loading="lazy">
+            </picture>
+            <div class="units-panel">
+                <article id="ourUnitsSection">
+                    <h2>Our Units</h2>
+                    <p>At Montreal Rental Hub, we offer a wide variety of rental units to suit every lifestyle and
+                        budget.
+                        Our portfolio includes modern apartments in bustling downtown locations, serene condos with
+                        stunning views, and spacious houses perfect for families. Each unit is carefully selected to
+                        ensure
+                        quality, comfort, and convenience. Browse through our listings to find detailed descriptions,
+                        high-quality images, and virtual tours of our available properties. Whether you're looking for a
+                        short-term stay or a long-term residence, Montreal Rental Hub has the perfect unit waiting for
+                        you.
+                    </p>
+                </article>
+                <a href="#ourUnitsSection" class="cta-btn">Explore Our Units</a>
+            </div>
+            <picture class="content-image-container_small">
+                <source srcset="images/montreal_mobile_1080x810_mobile1.webp" media="(min-width: 1200px)">
+                <source srcset="images/montreal_mobile_1080x810_mobile1.webp" media="(min-width: 680px)">
+                <img class="content-image_small" src="images/montreal_mobile_vertical_1080x1350_1.webp"
+                    alt="Montreal Rental Hub" loading="lazy">
+            </picture>
+            <picture class="content-image-container">
+                <source srcset="images/AVG_grid_desktop_2_5x7.webp" media="(min-width: 1200px)">
+                <source srcset="images/AVG_grid_desktop_2_5x7.webp" media="(min-width: 680px)">
+                <img class="content-image" src="images/AVG_grid_mobile_2_4x3.webp" alt="Montreal Rental Hub"
+                    loading="lazy">
+            </picture>
+
+            <article id="contactUsSection">
+
+                <a href="#ourUnitsSection" class="cta-btn">Contact us</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Tirso Anibal Lopez. All rights reserved. Quebec Canada</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
+<!-- <section id="temple-cards" class="images-section"></section> -->
