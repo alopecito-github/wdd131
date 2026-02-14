@@ -63,7 +63,7 @@
   .nav {
     display: flex;
     flex-direction: row;
-    position: static;
+    position: relative;
     background: transparent;
     padding: 0;
     margin: 0;
