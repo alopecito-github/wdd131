@@ -8,174 +8,283 @@ hambutton.addEventListener("click", () => {
   hambutton.classList.toggle("show");
 });
 
-const temples = [
+const units = [
   {
-    templeName: "Aba Nigeria",
-    location: "Aba, Nigeria",
-    dedicated: "2005, August, 7",
-    area: 11500,
-    imageUrl: "images/aba-nigeria-temple.webp",
+    Type: "Studio",
+    Model: "Berri",
+    Size: 410,
+    imageUrl: "images/units/gallery_1920x1440_Studio_1.webp",
   },
   {
-    templeName: "Manti Utah",
-    location: "Manti, Utah, USA",
-    dedicated: "1888, May, 21",
-    area: 74792,
-    imageUrl: "images/manti-temple.webp",
+    Type: "Studio",
+    Model: "Atwater",
+    Size: 430,
+    imageUrl: "images/units/gallery_1920x1440_Studio_2.webp",
   },
   {
-    templeName: "Payson Utah",
-    location: "Payson, Utah, USA",
-    dedicated: "2015, June, 7",
-    area: 96630,
-    imageUrl: "images/payson-utah-temple.webp",
+    Type: "Studio",
+    Model: "Papineau",
+    Size: 410,
+    imageUrl: "images/units/gallery_1920x1440_Studio_3.webp",
   },
   {
-    templeName: "Yigo Guam",
-    location: "Yigo, Guam",
-    dedicated: "2020, May, 2",
-    area: 6861,
-    imageUrl: "images/yigo_guam_temple.webp",
+    Type: "Studio",
+    Model: "St-Denis",
+    Size: 455,
+    imageUrl: "images/units/gallery_1920x1440_Studio_4.webp",
   },
   {
-    templeName: "Washington D.C.",
-    location: "Kensington, Maryland, USA",
-    dedicated: "1974, November, 19",
-    area: 156558,
-    imageUrl: "images/washington_dc_temple.webp",
+    Type: "Studio",
+    Model: "Crémazie",
+    Size: 480,
+    imageUrl: "images/units/gallery_1920x1440_Studio_5.webp",
   },
   {
-    templeName: "Lima Perú",
-    location: "Lima, Perú",
-    dedicated: "1986, January, 10",
-    area: 9600,
-    imageUrl: "images/lima-peru-temple.webp",
+    Type: "Studio",
+    Model: "Beaubien",
+    Size: 430,
+    imageUrl: "images/units/gallery_1920x1440_Studio_6.webp",
   },
   {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
-    imageUrl: "images/mexico-city-temple.webp",
+    Type: "1 Bedroom",
+    Model: "Laurier",
+    Size: 585,
+    imageUrl: "images/units/gallery_1920x1440_1b_1.webp",
   },
   {
-    templeName: "Barranquilla Colombia",
-    location: "Barranquilla, Colombia",
-    dedicated: "2018, December 9",
-    area: 25349,
-    imageUrl: "images/Barranquilla-Colombia-Temple.webp",
+    Type: "1 Bedroom",
+    Model: "Viau",
+    Size: 620,
+    imageUrl: "images/units/gallery_1920x1440_1b_2.webp",
   },
   {
-    templeName: "Asunción Paraguay",
-    location: "Asunción, Paraguay",
-    dedicated: "2019, November 3",
-    area: 11906,
-    imageUrl: "images/asuncion-paraguay-temple.webp",
+    Type: "1 Bedroom",
+    Model: "Rosemont",
+    Size: 585,
+    imageUrl: "images/units/gallery_1920x1440_1b_3.webp",
   },
   {
-    templeName: "Palmyra New York",
-    location: "Palmyra, New York, USA",
-    dedicated: "2000, April 6",
-    area: 10900,
-    imageUrl: "images/palmyra-temple.webp",
+    Type: "1 Bedroom",
+    Model: "Frontenac",
+    Size: 640,
+    imageUrl: "images/units/gallery_1920x1440_1b_4.webp",
+  },
+  {
+    Type: "1 Bedroom",
+    Model: "Parc",
+    Size: 675,
+    imageUrl: "images/units/gallery_1920x1440_1b_5.webp",
+  },
+  {
+    Type: "1 Bedroom",
+    Model: "Jarry",
+    Size: 620,
+    imageUrl: "images/units/gallery_1920x1440_1b_6.webp",
+  },
+  {
+    Type: "2 Bedrooms",
+    Model: "Pie-IX",
+    Size: 820,
+    imageUrl: "images/units/gallery_1920x1440_2b_1.webp",
+  },
+  {
+    Type: "2 Bedrooms",
+    Model: "Outremont",
+    Size: 875,
+    imageUrl: "images/units/gallery_1920x1440_2b_2.webp",
+  },
+  {
+    Type: "2 Bedrooms",
+    Model: "Villeneuve",
+    Size: 910,
+    imageUrl: "images/units/gallery_1920x1440_2b_3.webp",
+  },
+  {
+    Type: "2 Bedrooms",
+    Model: "Sherbrooke",
+    Size: 820,
+    imageUrl: "images/units/gallery_1920x1440_2b_4.webp",
+  },
+  {
+    Type: "2 Bedrooms",
+    Model: "St-Hubert",
+    Size: 960,
+    imageUrl: "images/units/gallery_1920x1440_2b_5.webp",
+  },
+  {
+    Type: "2 Bedrooms",
+    Model: "Hochelaga",
+    Size: 875,
+    imageUrl: "images/units/gallery_1920x1440_2b_6.webp",
   },
 ];
 
-function createTempleCard(templeArray) {
-  document.querySelector("#temple-cards").innerHTML = "";
-  // Loop through each temple in the array
-  templeArray.forEach((temple) => {
-    //Create elements
+function createUnitCard(unitArray) {
+  const container = document.querySelector("#unit_gallery");
+  if (!container) return;
+  container.innerHTML = "";
+
+  unitArray.forEach((unit) => {
     let card = document.createElement("figure");
     let img = document.createElement("img");
-    let name = document.createElement("figcaption");
-    let location = document.createElement("p");
-    let dedication = document.createElement("p");
+    let model = document.createElement("figcaption");
+    let type = document.createElement("p");
     let area = document.createElement("p");
 
-    // add classes so CSS applies
-    card.classList.add("temple-card");
-    img.classList.add("templeImage");
-    name.classList.add("title_card");
+    card.classList.add("unit-card");
+    img.classList.add("unitImage");
+    model.classList.add("title_card");
+    type.classList.add("type_card");
+    area.classList.add("area_card");
 
-    // fill text content
-    name.textContent = temple.templeName;
-    location.innerHTML = `<span class="label">Location: </span> ${temple.location}`;
-    dedication.innerHTML = `<span class="label">Dedication: </span> ${temple.dedicated}`;
-    area.innerHTML = `<span class="label">Size: </span> ${temple.area} sq.ft`;
+    model.textContent = unit.Model;
+    type.textContent = unit.Type;
+    area.innerHTML = `<span class="label">Size: </span> ${unit.Size} sq.ft`;
 
-    // image attributes
-    img.setAttribute("src", temple.imageUrl);
-    img.setAttribute("alt", `${temple.templeName} Temple`);
+    img.setAttribute("src", unit.imageUrl);
+    img.setAttribute("alt", `${unit.Model} Unit`);
     img.setAttribute("loading", "lazy");
-    // build card
+
     card.appendChild(img);
-    card.appendChild(name);
-    card.appendChild(location);
-    card.appendChild(dedication);
+    card.appendChild(model);
+    card.appendChild(type);
     card.appendChild(area);
 
-    document.querySelector("#temple-cards").appendChild(card);
+    container.appendChild(card);
   });
 }
 
-// Calling the function
-createTempleCard(temples);
+// Find the gallery container
+const unitGallery = document.querySelector("#unit_gallery");
 
-// Event listener Menu links
-/*Filtering Menu buttons 
-      -Old – temples built before 1900 
-        New – temples built after 2000
-        Large – temples larger than 90,000 square feet
-        Small – temples smaller than 10,000 square feet
-        Home – displays all the temples stored in the array.*/
+if (unitGallery) {
+  // Initial display
+  createUnitCard(units);
 
-const oldLink = document.querySelector("#oldTemples");
-const newLink = document.querySelector("#newTemples");
-const largeLink = document.querySelector("#largeTemples");
-const smallLink = document.querySelector("#smallTemples");
-const allLink = document.querySelector("#allTemples");
+  // Select the links
+  const onebLink = document.querySelector("#one-b");
+  const twobLink = document.querySelector("#two-b");
+  const studioLink = document.querySelector("#studio");
+  const allUnitsLink = document.querySelector("#allUnits");
 
-oldLink.addEventListener("click", () => {
-  // Filter temples with dedicated year < 1900
-  let oldTemples = temples.filter((temple) => {
-    let year = Number(temple.dedicated.substring(0, 4));
-    return year < 1900;
+  // Add listeners only if the elements exist
+  if (onebLink) {
+    onebLink.addEventListener("click", () => {
+      const oneBedroomUnits = units.filter((unit) => unit.Type === "1 Bedroom");
+      createUnitCard(oneBedroomUnits);
+    });
+  }
+
+  if (twobLink) {
+    twobLink.addEventListener("click", () => {
+      const twoBedroomUnits = units.filter(
+        (unit) => unit.Type === "2 Bedrooms",
+      );
+      createUnitCard(twoBedroomUnits);
+    });
+  }
+
+  if (studioLink) {
+    studioLink.addEventListener("click", () => {
+      const studioUnits = units.filter((unit) => unit.Type === "Studio");
+      createUnitCard(studioUnits);
+    });
+  }
+
+  if (allUnitsLink) {
+    allUnitsLink.addEventListener("click", () => {
+      createUnitCard(units);
+    });
+  }
+}
+
+// ==============Form filler================
+
+const professions = [
+  {
+    id: "pr-2024",
+    name: "Operations Manager",
+    averagerating: 4.5,
+  },
+  {
+    id: "pr-0927",
+    name: "Machine Learning Engineer",
+    averagerating: 4.7,
+  },
+  {
+    id: "re-3567",
+    name: "Engineering Technician",
+    averagerating: 3.5,
+  },
+  {
+    id: "ty-6789",
+    name: "Plant Manager",
+    averagerating: 3.9,
+  },
+  {
+    id: "po-3456",
+    name: "Administrative Assistant",
+    averagerating: 5.0,
+  },
+];
+
+const professionSelect = document.querySelector("#profession");
+
+if (professionSelect) {
+  professions.forEach((profession) => {
+    const option = document.createElement("option");
+    option.value = profession.id;
+    option.textContent = profession.name;
+    professionSelect.appendChild(option);
   });
+}
 
-  createTempleCard(oldTemples);
-});
+// ==============Form Receptor================
 
-newLink.addEventListener("click", () => {
-  // Filter temples with dedicated year >= 2000
-  let newTemples = temples.filter((temple) => {
-    let year = Number(temple.dedicated.substring(0, 4));
-    return year >= 2000;
-  });
-  createTempleCard(newTemples);
-});
+const params = new URLSearchParams(window.location.search);
 
-largeLink.addEventListener("click", () => {
-  // Filter Large – temples larger than 90,000 square feet
-  let largeTemples = temples.filter((temple) => {
-    let area = Number(temple.area);
-    return area > 90000;
-  });
+const full = params.get("fullName");
+const age = params.get("age");
+const profession = params.get("profession");
+const email = params.get("email");
+const phone = params.get("phone");
+const desiredUnit = params.get("desiredUnit");
+const moveInDate = params.get("moveInDate");
+const summarySection = document.querySelector("#app-summary");
 
-  createTempleCard(largeTemples);
-});
+if (summarySection) {
+  const params = new URLSearchParams(window.location.search);
 
-smallLink.addEventListener("click", () => {
-  // Small – temples smaller than 10,000 square feet
-  let smallTemples = temples.filter((temple) => {
-    let area = Number(temple.area);
-    return area < 10000;
-  });
+  const full = params.get("fullName");
+  const age = params.get("age");
+  const profession = params.get("profession");
+  const email = params.get("email");
+  const phone = params.get("phone");
+  const desiredUnit = params.get("desiredUnit");
+  const moveInDate = params.get("moveInDate");
 
-  createTempleCard(smallTemples);
-});
+  const fullNameOutput = document.querySelector("#fullNameOutput");
+  const ageOutput = document.querySelector("#ageOutput");
+  const professionOutput = document.querySelector("#professionOutput");
+  const emailOutput = document.querySelector("#emailOutput");
+  const phoneOutput = document.querySelector("#phoneOutput");
+  const desiredUnitOutput = document.querySelector("#desiredUnitOutput");
+  const moveInDateOutput = document.querySelector("#moveInDateOutput");
+  const dateOutput = document.querySelector("#dateOutput");
+  const appCountOutput = document.querySelector("#appCount");
 
-allLink.addEventListener("click", () => {
-  // go back to home
-  createTempleCard(temples);
-});
+  if (fullNameOutput) fullNameOutput.textContent = full || "";
+  if (ageOutput) ageOutput.textContent = age || "";
+  if (professionOutput) professionOutput.textContent = profession || "";
+  if (emailOutput) emailOutput.textContent = email || "";
+  if (phoneOutput) phoneOutput.textContent = phone || "";
+  if (desiredUnitOutput) desiredUnitOutput.textContent = desiredUnit || "";
+  if (moveInDateOutput) moveInDateOutput.textContent = moveInDate || "";
+  if (dateOutput) dateOutput.textContent = new Date().toLocaleDateString();
+
+  let count = Number(localStorage.getItem("appCount")) || 0;
+  count++;
+  localStorage.setItem("appCount", count);
+
+  if (appCountOutput) appCountOutput.textContent = count;
+}

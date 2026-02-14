@@ -1,6 +1,7 @@
 /* --------------------------------
-   Larger-screen styles
+   Responsive Breakpoints
 ---------------------------------*/
+
 @media (min-width: 680px) {
   .hero-image {
     width: 100%;
@@ -13,17 +14,17 @@
     background-color: var(--accent2);
   }
 
-  /* Slightly more cinematic proportions for mid-sized screens */
   .content-image,
   .content-image_small {
     aspect-ratio: 16 / 9;
     object-fit: cover;
   }
+
   .cta-btn {
     display: block;
     width: 60%;
     max-width: 280px;
-    margin: 2rem auto 0; /* center horizontally */
+    margin: 2rem auto 0;
     text-align: center;
   }
 }
@@ -55,6 +56,9 @@
   #menu {
     display: none;
   }
+  header .logo {
+    height: 3rem;
+  }
 
   .nav {
     display: flex;
@@ -80,7 +84,7 @@
     transition:
       background-color 0.2s ease,
       color 0.2s ease;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   header:hover {
@@ -117,7 +121,6 @@
     flex: 1;
     background-color: var(--accent2);
     padding: 3rem 4rem;
-    justify-content: flex-start;
     position: relative;
     display: block;
     height: 100%;
@@ -159,13 +162,12 @@
     margin: 0 auto;
     background-color: var(--accent2);
     display: grid;
-    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); /* image : text */
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
     gap: 3rem 4rem;
     align-items: start;
     padding: 4rem 0;
   }
 
-  /* All pictures take full height of their grid cell */
   .content-image-container,
   .content-image-container_small {
     width: 100%;
@@ -181,9 +183,8 @@
     margin: 0;
   }
 
-  /* Articles read like clean text panels */
   .content-section article {
-    padding: 2rem;
+    padding: 0;
     background: transparent;
     box-shadow: none;
   }
@@ -191,21 +192,14 @@
   .content-section article h2 {
     font-size: clamp(2rem, 3vw, 2.6rem);
     margin-bottom: 1.25rem;
+    text-align: center;
   }
 
   .content-section article p {
-    text-align: justify;
+    text-align: center;
     line-height: 1.6;
     max-width: 60ch;
-  }
-
-  .content-section .cta-btn {
-    grid-column: 2;
-    justify-self: flex-start;
-    margin-top: 0.5rem;
-    padding: 0.9rem 2.4rem;
-    letter-spacing: 0.08em;
-    font-size: 0.9rem;
+    margin: 0 auto;
   }
 
   .units-panel {
@@ -214,15 +208,100 @@
     justify-content: flex-end;
     align-items: flex-start;
     gap: 1.5rem;
-    height: 100%; 
+    height: 100%;
   }
 
-  .content-section > * {
-    height: 100%; 
+  .grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 15px;
+    max-width: 1600px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    overflow: hidden;
   }
+
+  .gallery-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gallery-item.wide {
+    grid-column: span 3;
+    height: 400px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.02);
+  }
+
+  .button_montreal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: var(--accent2);
+  }
+
+  .button_montreal .cta-btn {
+    margin: 0;
+    width: auto;
+    min-width: 280px;
+    padding: 1rem 2.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+  }
+
+  .sub-nav a {
+    font-size: 2rem;
+  }
+
+  .images-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 0 2rem;
+  }
+  .unit-card {
+    padding-bottom: 1rem;
+  }
+
+  .title_card {
+    font-size: 1.8rem;
+  }
+
+  .units-gallery {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /*============================Units Large Css============================*/
 }
 
 @media (min-width: 1200px) {
+  header .logo {
+    height: 3rem;
+  }
+
+  .nav a {
+    font-size: 1.6rem;
+  }
   .hero-block {
     height: 100vh;
   }
@@ -231,6 +310,7 @@
     height: auto;
     max-height: 100vh;
   }
+
   .hero-image {
     width: 100%;
     height: 100%;
@@ -256,29 +336,8 @@
     align-items: start;
   }
 
-  .content-image-container,
-  .content-image-container_small {
-    width: 100%;
-    height: 100%;
-  }
-
-  .content-image,
-  .content-image_small {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding: 0;
-    margin: 0;
-  }
-
-  .content-section article {
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-
   .content-section article h2 {
-    font-size: clamp(2rem, 3vw, 2.6rem);
+    font-size: 2.8rem;
     margin-bottom: 1.25rem;
   }
 
@@ -286,27 +345,140 @@
     text-align: left;
     line-height: 1.6;
     max-width: 60ch;
-  }
-
-  .content-section article h2 {
-    font-size: 2.8rem;
-  }
-
-  .content-section article p {
     font-size: 1.05rem;
   }
 
-  /* Button under text, related to image bottom */
   .units-panel .cta-btn {
     display: inline-block;
-    width: auto; 
+    width: auto;
     padding: 0.9rem 2.4rem;
     letter-spacing: 0.08em;
     font-size: 0.9rem;
     text-align: center;
   }
 
-  .units-panel .cta-btn:hover {
-    background-color: var(--primary);
+  .content-section_montreal,
+  .content-section_reverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    padding: 6rem 10% 6rem 0;
+  }
+
+  .content-section_reverse {
+    grid-template-columns: 1fr 1.3fr;
+  }
+
+  .content-section_montreal article,
+  .content-section_reverse article {
+    max-width: 600px;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Keeps all text content right-aligned */
+  }
+
+  .content-section_montreal h2,
+  .content-section_reverse h2 {
+    font-size: 4.5rem;
+    letter-spacing: -2px;
+    margin-bottom: 2rem;
+    text-align: right;
+  }
+
+  .content-section_montreal p,
+  .content-section_reverse p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: right;
+  }
+
+  .content-section_reverse article {
+    grid-column: 1;
+  }
+
+  .content-section_reverse .content-image-container_montreal {
+    grid-column: 2;
+  }
+
+  .editorial-about {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 6rem;
+    padding: 8rem 0 8rem 10%;
+    background-color: var(--accent2);
+  }
+
+  .editorial-about article {
+    max-width: 480px;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .editorial-about h2 {
+    font-size: 4.5rem;
+    line-height: 0.85;
+    letter-spacing: -3px;
+    color: var(--primary);
+    margin-bottom: 2.5rem;
+    text-align: right;
+  }
+
+  .editorial-about p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: right;
+  }
+
+  .editorial-about .content-image {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+  }
+
+  /* Specific Alignment Fixes for Buttons in Flex Containers */
+  .content-section_montreal article .cta-btn,
+  .content-section_reverse article .cta-btn,
+  .editorial-about article .cta-btn {
+    margin: 2rem 0 0 auto;
+    display: inline-block;
+    width: auto;
+  }
+
+  .button_montreal .cta-btn {
+    margin: 2.5rem auto 0;
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 1.1rem 3rem;
+    min-width: 600px;
+  }
+
+  .units-gallery {
+    max-width: 1800px;
+    padding: 6rem 0;
+  }
+
+  .images-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  .title_card {
+    font-size: 2.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .type_card {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+  }
+
+  .area_card {
+    font-size: 1.2rem;
+    padding-top: 1rem;
   }
 }

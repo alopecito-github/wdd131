@@ -1,7 +1,3 @@
-/* --------------------------------
-   Mobile base CSS styles
----------------------------------*/
-
 :root {
   --primary: #0b1c2c;
   --secondary: #da291c;
@@ -10,7 +6,7 @@
   --accent3: #971b2f;
   --text: #333333;
   --max-w: 1200px;
-  --nav-h: 100px;
+  --nav-h: 6rem;
   --nav-font-size: 1rem;
   --font-header: "PT Serif", serif;
   --font-body: "Montserrat", sans-serif;
@@ -44,11 +40,9 @@ p {
 
 body {
   margin: 0;
-
   max-width: 100%;
   overflow-x: hidden;
 }
-/* Header CSS styles */
 
 header {
   height: var(--nav-h);
@@ -72,7 +66,6 @@ header .logo {
   margin: 0;
 }
 
-/* menu css styles */
 #menu {
   margin-left: auto;
   display: flex;
@@ -91,7 +84,6 @@ header .logo {
 #menu::before {
   content: "☰";
 }
-
 #menu.show::before {
   content: "✖";
 }
@@ -119,7 +111,6 @@ nav {
 .nav.show {
   display: flex;
 }
-
 .nav li {
   width: 100%;
 }
@@ -140,8 +131,6 @@ nav {
   background: var(--secondary);
   color: var(--accent2);
 }
-
-/* main section */
 
 section,
 .hero-block,
@@ -169,6 +158,7 @@ main {
 .hero-title-overlay {
   grid-area: hero-stack;
 }
+
 .hero-image {
   width: 100%;
   height: auto;
@@ -176,7 +166,7 @@ main {
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
-/* 2. The Floating Title */
+
 .hero-title-overlay {
   padding: 1.5rem;
   z-index: 2;
@@ -225,20 +215,20 @@ article h2 {
 }
 
 article p {
-  text-transform: capitalize;
   text-align: justify;
 }
 
 .content-image-container {
   width: 100%;
 }
+
 .content-image,
 .content-image_small {
   width: 100%;
   height: auto;
   display: block;
   aspect-ratio: 4 / 5;
-  object-fit: cover;
+  object-ratio: cover;
   padding: 0;
   margin: 0;
 }
@@ -259,8 +249,12 @@ article p {
   font-weight: 700;
   text-transform: uppercase;
   margin: 2rem auto 0;
-  transition: background-color 0.3s ease;
   border: 2px solid var(--primary);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .content-section .cta-btn:hover {
@@ -268,7 +262,272 @@ article p {
   color: var(--accent2);
   border: none;
 }
-/* footer*/
+
+.cta-btn:hover {
+  background-color: var(--primary);
+  color: var(--accent2);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.grid-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.content-section_montreal,
+.content-section_reverse {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1.5rem;
+  background-color: var(--accent2);
+}
+
+.content-image-container_montreal {
+  width: 80%;
+  margin: 0 auto 2rem;
+}
+
+.content-image-container_montreal img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content-section_montreal h2,
+.content-section_reverse h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.content-section_montreal p {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.button_montreal {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: var(--accent2);
+}
+
+.button_montreal .cta-btn {
+  display: block;
+  width: auto;
+  min-width: 280px;
+  margin: 0;
+  padding: 1rem 2.5rem;
+  text-align: center;
+}
+
+.editorial-about {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1.5rem;
+  background-color: var(--accent2);
+}
+
+.editorial-about h2 {
+  margin-bottom: 1.5rem;
+}
+.editorial-about .content-image-container_montreal {
+  margin: 2rem auto 0;
+}
+
+/* ------------------- sub-nav styling UNITS --------------------*/
+.sub-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem;
+  list-style: none;
+}
+
+.sub-nav li {
+  flex: 1;
+  text-align: center;
+}
+
+.sub-nav a {
+  display: inline-block;
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-header);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sub-nav a:hover {
+  color: var(--secondary);
+}
+
+/* =========================Styling Gallery of UNITS================ */
+
+.units-gallery {
+  padding: 2rem 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.images-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Individual Card Styling */
+.unit-card {
+  margin: 0;
+  color: var(--text);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.unitImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.unit-card:hover .unitImage {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.title_card {
+  font-family: var(--font-header);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+.type_card {
+  font-family: var(--font-body);
+  color: var(--secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.area_card {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  border-top: 1px solid #eee;
+  padding-top: 0.75rem;
+}
+.area_card .label {
+  font-weight: 700;
+  color: var(--primary);
+  margin-right: 4px;
+}
+
+.units-hero {
+  height: 60vh !important;
+  min-height: 400px;
+}
+
+.units-hero .hero-visual-container,
+.units-hero .hero-image-wrapper,
+.units-hero .hero-image {
+  height: 100% !important;
+  max-height: 60vh;
+}
+
+.units-hero .hero-subtitle-bar {
+  padding: 1.5rem;
+}
+
+/* ------------------- Form Styling --------------------*/
+.form-wrapper {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.form-wrapper h2 {
+  font-family: var(--font-header);
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-field label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.form-field input,
+.form-field select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+/* Style the Submit Button */
+#app-form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  font-family: var(--font-header);
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+#app-form button:hover {
+  background-color: var(--primary);
+}
+
+/* -------------Footer styling all ------------------------------------------------*/
 footer {
   border-top: 1px solid #e5e7eb;
   background: var(--accent2);

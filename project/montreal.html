@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD131 Dynamic Web Fundamentals Author: Tirso Anibal Lopez. Rental Listing Project.">
+    <meta name="author" content="Tirso Anibal Lopez">
+    <meta name="keywords"
+        content="Montreal Downtown rental, Montreal apartment rental, Montreal condo rental, Montreal house rental, Montreal room rental, Montreal studio rental, Montreal long-term rental, Montreal luxury rental, Montreal affordable rental, Montreal student rental">
+    <title>Montreal Rental Hub - About us</title>
+    <link rel="stylesheet" href="styles/rental.css">
+    <link rel="stylesheet" href="styles/rental-large.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/rental.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/icons/baker_logo.svg" alt="Montreal Rental Hub Logo" class="logo"></a>
+        <a id="menu" href="#"></a>
+        <nav>
+            <ul class="nav">
+                <li><a href="montreal.html" id="montreal">Montreal</a></li>
+                <li><a href="units.html" id="ourUnits">Our Units</a></li>
+                <li><a href="apply.html" id="apply">Apply now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-block">
+            <div class="hero-visual-container">
+                <picture class="hero-image-wrapper">
+                    <source srcset="images/AGV_image_2_desktop_2250-sq.webp" media="(min-width: 900px)">
+                    <source srcset="images/AGV_image_2_tablet_1500-sq.webp" media="(min-width: 680px)">
+                    <img class="hero-image" src="images/AGV_image_2_1080-sq_mobile.webp" alt="Montreal Rental Hub"
+                        loading="lazy">
+                </picture>
+
+                <div class="hero-title-overlay">
+                    <h1>Why Montreal?</h1>
+                </div>
+            </div>
+
+            <div class="hero-subtitle-bar">
+                <h2>WELCOME TO THE HEART OF THE CITY</h2>
+            </div>
+        </section>
+        <section class="content-section_montreal">
+            <article id="montrealSection">
+                <h2>Montreal vibrant and diverse city</h2>
+                <p>Montreal is a vibrant and diverse city in Quebec, Canada, known for its rich cultural
+                    heritage,historic architecture, and dynamic arts scene. As the largest city in Quebec, Montreal
+                    offers a unique blend of European charm and North American energy. The city is renowned for its
+                    world-class museums, festivals, and culinary scene. With its bilingual nature (French and English),
+                    Montreal provides an inclusive environment for residents and visitors alike. Whether you're
+                    exploring the historic Old Montreal district or enjoying the modern skyline of downtown Montreal,
+                    there's something for everyone in this exciting metropolis.</p>
+            </article>
+            <picture class="content-image-container_montreal">
+                <source srcset="images/montreal_b_w_desktop.webp" media="(min-width: 1200px)">
+                <source srcset="images/montreal_b_w_laptop.webp" media="(min-width: 680px)">
+                <img class="content-image" src="images/montreal_b_w_mobile.webp" alt="Montreal Rental Hub"
+                    loading="lazy">
+            </picture>
+        </section>
+        <section class="gallery-section grid-gallery">
+            <picture class="gallery-item large">
+                <source srcset="images/AGV_image_4_desktop_2250_sq.webp" media="(min-width: 1200px)">
+                <img src="images/AGV_image_4_1080-sq_mobile.webp" alt="Montreal Interior" loading="lazy">
+            </picture>
+
+            <picture class="gallery-item">
+                <source srcset="images/montrea_3_1920x1015_tablet.webp" media="(min-width: 1200px)">
+                <img src="images/montrea_3_1080x680_mobile.webp" alt="Montreal Unit" loading="lazy">
+            </picture>
+
+            <picture class="gallery-item">
+                <source srcset="images/montrea_4_1920x1080.webp" media="(min-width: 1200px)">
+                <img src="images/montrea_4_1080x680_mobile.webp" alt="Montreal Exterior" loading="lazy">
+            </picture>
+
+            <picture class="gallery-item wide">
+                <source srcset="images/montreal_1200x1680_1.webp" media="(min-width: 1200px)">
+                <img src="images/mobile_montreal_1200x1680_1.webp" alt="Montreal Lifestyle" loading="lazy">
+            </picture>
+        </section>
+        <section class="button_montreal">
+            <a href="units.html" class="cta-btn">Explore Our Units</a>
+        </section>
+
+        <section class="content-section_montreal content-section_reverse">
+            <article id="montrealSection2">
+                <h2>A Place to live in <br>old Montreal</h2>
+                <p>Old Montreal is a historic district in Montreal, Canada, known for its cobblestone streets, colonial
+                    architecture, and vibrant cultural scene. The area is home to numerous museums, galleries, and
+                    restaurants that showcase the city's rich heritage.</p>
+            </article>
+
+            <picture class="content-image-container_montreal">
+                <source srcset="images/montreal_b_w_desktop.webp" media="(min-width: 1200px)">
+                <source srcset="images/montreal_b_w_laptop.webp" media="(min-width: 680px)">
+                <img class="content-image" src="images/montreal_b_w_mobile.webp" alt="Old Montreal" loading="lazy">
+            </picture>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Tirso Anibal Lopez. All rights reserved. Quebec Canada</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
+<!-- <section id="temple-cards" class="images-section"></section> -->

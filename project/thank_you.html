@@ -9,7 +9,7 @@
     <meta name="author" content="Tirso Anibal Lopez">
     <meta name="keywords"
         content="Montreal Downtown rental, Montreal apartment rental, Montreal condo rental, Montreal house rental, Montreal room rental, Montreal studio rental, Montreal long-term rental, Montreal luxury rental, Montreal affordable rental, Montreal student rental">
-    <title>Montreal Rental Hub</title>
+    <title>Montreal Rental Hub - About us</title>
     <link rel="stylesheet" href="styles/rental.css">
     <link rel="stylesheet" href="styles/rental-large.css">
 
@@ -37,54 +37,43 @@
         </nav>
     </header>
     <main>
-        <section class="hero-block">
+        <section class="hero-block units-hero">
             <div class="hero-visual-container">
                 <picture class="hero-image-wrapper">
-                    <source srcset="images/AGVLobby_desktop_2250-sq.webp" media="(min-width: 900px)">
-                    <source srcset="images/AGVLobby_tablet_1500-sq.webp" media="(min-width: 680px)">
-                    <img class="hero-image" src="images/AVG Lobby_mobile_960.webp" alt="Montreal Rental Hub"
+                    <source srcset="images/hero-units_desktop.webp" media="(min-width: 900px)">
+                    <source srcset="images/hero-units_desktop.webp" media="(min-width: 680px)">
+                    <img class="hero-image" src="images/hero-units_mobile.webp" alt="Montreal Rental Hub"
                         loading="lazy">
                 </picture>
+
                 <div class="hero-title-overlay">
-                    <h1>MONTREAL<br>RENTAL HUB.</h1>
+                    <h1>Montreal Rental Hub</h1>
                 </div>
             </div>
-            <div class="hero-subtitle-bar">
-                <h2>NEW RENTALS AT THE CENTRE OF IT ALL</h2>
-            </div>
         </section>
+        <section class="form-wrapper">
+            <h2>Application Submitted Successfully!</h2>
+            <p>Thank you for your application. Our team will review your information and get back to you shortly.</p>
+            <p>In the meantime, feel free to explore our website and learn more about our available units and the
+                vibrant city of Montreal.</p>
+            <p>We look forward to helping you find your new home at Montreal Rental Hub!</p>
 
-        <section class="content-section_montreal editorial-about">
-            <article id="aboutUsSection">
-                <h2>Luxury, comfort & convenience</h2>
-                <p>Montreal Rental Hub offers a diverse range of rental units to suit every lifestyle and budget...</p>
-            </article>
-            <picture class="content-image-container_montreal">
-                <img class="content-image" src="images/AGV_image_4_1080-sq_mobile.webp" alt="Montreal Rental Hub">
-            </picture>
-        </section>
+            <section id="app-summary">
+                <h2>Application Summary</h2>
 
-        <section class="content-section_montreal content-section_reverse">
-            <article>
-                <h2>Be part of our community</h2>
-                <p>At Montreal Rental Hub, we offer a wide variety of rental units to suit every lifestyle and budget...
-                </p>
-                <a href="#" class="cta-btn">Explore Our Units</a>
-            </article>
-            <picture class="content-image-container_montreal">
-                <img class="content-image" src="images/montreal_mobile_vertical_1080x1350_1.webp" alt="Units">
-            </picture>
-        </section>
-
-        <section class="content-section_montreal">
-            <article>
-                <h2>A few steps to get started</h2>
-                <p>Ready to find your next home? Apply online today and get started with your rental process.</p>
-                <a href="#" class="cta-btn">Apply now!</a>
-            </article>
-            <picture class="content-image-container_montreal">
-                <img class="content-image" src="images/AVG_grid_mobile_2_4x3.webp" alt="Contact">
-            </picture>
+                <div class="review-output-box">
+                    <p><strong>Full Name:</strong> <span id="fullNameOutput"></span></p>
+                    <p><strong>Age:</strong> <span id="ageOutput"></span></p>
+                    <p><strong>Profession:</strong> <span id="professionOutput"></span></p>
+                    <p><strong>Email:</strong> <span id="emailOutput"></span></p>
+                    <p><strong>Phone:</strong> <span id="phoneOutput"></span></p>
+                    <p><strong>Desired Unit:</strong> <span id="desiredUnitOutput"></span></p>
+                    <p><strong>Move-in Date:</strong> <span id="moveInDateOutput"></span></p>
+                    <p><strong>Date of Application:</strong> <span id="dateOutput"></span></p>
+                    <p class="count"><strong>Total applications submitted:</strong> <span id="appCount"></span></p>
+                    <p class="thanks">Thank You for Your Application!</p>
+                </div>
+            </section>
         </section>
     </main>
     <footer>
